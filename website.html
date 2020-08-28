@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+
+<body>
+	<form id="quiz">
+		<div class="slideshow-container">			
+				<!--Question 1 -->
+				<div class="myQ fade">
+					<h1 style="width: 100%">Q1</h1>
+				  	<label><input type="radio" name="q1" value="c1">
+				  		A1
+				  	</label><br />
+				  	<label><input type="radio" name="q1" value="c2">
+				  		A2
+				  	</label><br />
+				  	<label><input type="radio" name="q1" value="c3">
+				  		A3
+				  	</label><br />
+				</div>
+
+				<!--Question 2 -->
+				<div class="myQ fade">
+					<h1 style="width: 100%">Q2</h1>
+				 	<label><input type="radio" name="q2" value="c1">
+				  		A1
+				  	</label><br />
+				  	<label><input type="radio" name="q2" value="c2">
+				  		A2
+				  	</label><br />
+				  	<label><input type="radio" name="q2" value="c3">
+				  		A3
+				  	</label><br />
+				</div>
+
+				<!--Question 3 -->
+				<div class="myQ fade">
+					<h1 style="width: 100%">Q3</h1>
+					<label><input type="radio" name="q3" value="c1">
+				  		A1
+				  	</label><br />
+				  	<label><input type="radio" name="q3" value="c2">
+				  		A2
+				  	</label><br />
+				  	<label><input type="radio" name="q3" value="c3">
+				  		A3
+				  	</label><br />
+				</div>
+
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+			<button type="submit" id="submit" onclick="tabulateAnswers()"
+			>Submit Your Answers
+			</button>
+	  		<button type="reset" id="reset" onclick="resetAnswer()">Reset</button>
+  		</div>
+  	</form>		
+	<div id="answer">Your result will show up here!</div>
+	
+<script src="questionnaire.js"></script>
+
+</body>
+
+</html>
