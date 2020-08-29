@@ -15,9 +15,15 @@ function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("myQ");
   var dots = document.getElementsByClassName("dot");
+  
   //set slide index
   if (n > slides.length) {slideIndex = 1}   //clockwise loop through questions 
   if (n < 1) {slideIndex = slides.length}   //anti-clockwise loop through questions
+
+  //enable submit button only on last question
+  //if (n === slides.length) {
+  //  document.getElementsById('submit').disable = true;
+  //}
 
   //deleting shown slide
   for (i = 0; i < slides.length; i++) {
