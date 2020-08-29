@@ -1,10 +1,12 @@
 var slideIndex = 1;
 showSlides(slideIndex);
 
+//right/left slide showing
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
+//setting current slide
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
@@ -13,17 +15,21 @@ function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("myQ");
   var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
+  //set slide index
+  if (n > slides.length) {slideIndex = 1}   //clockwise loop through questions 
+  if (n < 1) {slideIndex = slides.length}   //anti-clockwise loop through questions
 
+  //deleting shown slide
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";  
   }
 
+  //deleting dots
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
 
+  //display new slide
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
@@ -56,10 +62,10 @@ function tabulateAnswers() {
   }
 
   // Find out which choice got the highest score.
-    // If you add more choices and outcomes, you must add the variable here.
   var maxscore = Math.max(c1score,c2score,c3score);
-      // Display answer corresponding to that choice
+  // Display answer corresponding to that choice
   var answerbox = document.getElementById('answer');
+  answerbox.style.display = "block"
 
   if (c1score == maxscore) { // If user chooses the first choice the most, this outcome will be displayed.
       answerbox.innerHTML = "Option 1 was chosen";
@@ -70,13 +76,20 @@ function tabulateAnswers() {
   if (c3score == maxscore) { // If user chooses the third choice the most, this outcome will be displayed.
       answerbox.innerHTML = "Option 3 was chosen";
   }   
-    // If you add more choices, you must add another response below.
+  // If you add more choices, you must add another response below.
+
+  //deletes the input form
+  var quizform = document.getElementById("quiz");
+  quizform.style.display = "none";
+    
   return false;
 }
 
 
+//must be changed (result shoowing while form is visible)
 // program the reset button
 function resetAnswer() {
   var answerbox = document.getElementById('answer');
+  answerbox.style.display = "none";
   answerbox.innerHTML = "Your result will show up here!";
 }

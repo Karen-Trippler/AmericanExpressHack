@@ -52,14 +52,21 @@
 				</div>
 
 			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-			<a class="next" onclick="plusSlides(1)">&#10095;</a>
-			<input type="submit" name="submit">
-
-			<!--<button type="submit" id="submit" onclick="tabulateAnswers()">Submit</button>-->
-	  		<button type="reset" id="reset" onclick="resetAnswer()">Reset</button>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>	
   		</div>
+
+  		<input type="submit" name="submit">
+	  	<button type="reset" id="reset" onclick="resetAnswer()">Reset</button>
+	  	<br>
+	  	<!-- The dots/circles -->
+		<div>
+		  <span class="dot" onclick="currentSlide(1)"></span>
+		  <span class="dot" onclick="currentSlide(2)"></span>
+		  <span class="dot" onclick="currentSlide(3)"></span>
+		</div>
+
   	</form>
-<div id="answer">Your result will show up here!</div>
+<div id="answer" style="display: none">Your result will show up here!</div>
 
 <script src="questionnaire.js"></script>
 
