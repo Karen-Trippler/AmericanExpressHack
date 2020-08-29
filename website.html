@@ -7,7 +7,7 @@
 </head>
 
 <body>
-	<form id="quiz">
+	<form id="quiz" onsubmit="return tabulateAnswers()">
 		<div class="slideshow-container">			
 				<!--Question 1 -->
 				<div class="myQ fade">
@@ -53,15 +53,14 @@
 
 			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			<input type="submit" name="submit">
 
-			<button type="submit" id="submit" onclick="tabulateAnswers()"
-			>Submit Your Answers
-			</button>
+			<!--<button type="submit" id="submit" onclick="tabulateAnswers()">Submit</button>-->
 	  		<button type="reset" id="reset" onclick="resetAnswer()">Reset</button>
   		</div>
-  	</form>		
-	<div id="answer">Your result will show up here!</div>
-	
+  	</form>
+<div id="answer">Your result will show up here!</div>
+
 <script src="questionnaire.js"></script>
 
 </body>

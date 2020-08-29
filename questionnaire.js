@@ -28,7 +28,6 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-
 // function to calculate the result of the survey
 function tabulateAnswers() {
   // initialize variables for each choice's score
@@ -36,7 +35,6 @@ function tabulateAnswers() {
   var c1score = 0;
   var c2score = 0;
   var c3score = 0;
-
   // get a list of the radio inputs on the page
   var choices = document.getElementsByTagName('input');
   // loop through all the radio inputs
@@ -57,23 +55,25 @@ function tabulateAnswers() {
     }
   }
 
- 	// Find out which choice got the highest score.
-  	// If you add more choices and outcomes, you must add the variable here.
-  	var maxscore = Math.max(c1score,c2score,c3score);
-	  	// Display answer corresponding to that choice
-	var answerbox = document.getElementById('answer');
-	if (c1score == maxscore) { // If user chooses the first choice the most, this outcome will be displayed.
-	    answerbox.innerHTML = "Option 1 was chosen"
-	}
-	if (c2score == maxscore) { // If user chooses the second choice the most, this outcome will be displayed.
-	    answerbox.innerHTML = "Option 2 was chosen"
-	}
-	if (c3score == maxscore) { // If user chooses the third choice the most, this outcome will be displayed.
-	    answerbox.innerHTML = "Option 3 was chosen";
-	}
-	  
-	  // If you add more choices, you must add another response below.
+  // Find out which choice got the highest score.
+    // If you add more choices and outcomes, you must add the variable here.
+  var maxscore = Math.max(c1score,c2score,c3score);
+      // Display answer corresponding to that choice
+  var answerbox = document.getElementById('answer');
+
+  if (c1score == maxscore) { // If user chooses the first choice the most, this outcome will be displayed.
+      answerbox.innerHTML = "Option 1 was chosen";
+  }
+  if (c2score == maxscore) { // If user chooses the second choice the most, this outcome will be displayed.
+      answerbox.innerHTML = "Option 2 was chosen";
+  }
+  if (c3score == maxscore) { // If user chooses the third choice the most, this outcome will be displayed.
+      answerbox.innerHTML = "Option 3 was chosen";
+  }   
+    // If you add more choices, you must add another response below.
+  return false;
 }
+
 
 // program the reset button
 function resetAnswer() {
