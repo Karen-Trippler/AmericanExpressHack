@@ -162,3 +162,19 @@ button, .subbut {
 .active, .dot:hover {
   background-color: #717171;
 }
+
+/*Answer Box*/
+.cardimg {
+	float: left;
+	padding: 16px;
+}
+
+.anstext {
+	float: right;
+	padding: 16px;
+}
+
+.cardlink {
+	text-decoration: none;
+	padding: 10px 24px;
+}

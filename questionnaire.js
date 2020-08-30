@@ -73,7 +73,8 @@ function tabulateAnswers() {
   var maxscore = Math.max(c1score,c2score,c3score);
   // Display answer corresponding to that choice
   var answerbox = document.getElementById('answer');
-  answerbox.style.display = "block"
+  answerbox.style.display = "block";
+  var anstext = document.getElementById('anstext');
 
   if (c1score == maxscore) { // If user chooses the first choice the most, this outcome will be displayed.
       answerbox.innerHTML = "Option 1 was chosen";
@@ -83,8 +84,23 @@ function tabulateAnswers() {
   }
   if (c3score == maxscore) { // If user chooses the third choice the most, this outcome will be displayed.
       answerbox.innerHTML = "Option 3 was chosen";
+      var cardimg = "img/basic_card.jpg";
+      var cardtext = "...";
+      var cardlink = "https://www.americanexpress.com/uk/customer-service/?inav=gb_sitefooter_faqs";
+      //answerbox.innerHTML = "<img src='"+cardimg+"'>"
   }   
   // If you add more choices, you must add another response below.
+
+  //card link html
+  var link = "<a class='cardlink' href='"+cardlink+"'>More Info</a>";
+  //card img html
+  var img = "<img class='cardimg' src='"+cardimg+"'>";
+  //cardtext html
+  var txt = "<div class='anstext'>"+cardtext+"</div>"+link;
+  // combination
+  answerbox.innerHTML = img.concat(txt);
+  //"<img class='cardimg' src='"+cardimg+"'><div class='anstext'>"+cardtext+"</div>";
+  //anstext.innerHTML = cardtext;
 
   //deletes the input form
   var quizform = document.getElementById("quiz");
