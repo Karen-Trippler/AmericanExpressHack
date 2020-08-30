@@ -8,7 +8,7 @@
 
 <body>
 <!--Button to start Questions -->
-<button id="stBtn">Find the card for You!</button>
+<button class="stBtn" id="stBtn">Find the card for You!</button>
 
 <!--Questionannaire Modal -->
 <div id="modalwrapper" class="wrapper">
@@ -17,13 +17,13 @@
 		<!-- Modal Header (Closing Button)-->
 		<div class="modal-header">
 			<span class="close" id="close1">&times;</span>
-			<h2>The perfect American Express Card for You!</h2>
+			<h3>The perfect American Express Card for You!</h3>
 		</div>
 		<!--Question Form -->
 		<form id="quiz" onsubmit="return tabulateAnswers()">
 			<div class="slideshow-container">			
 					<!--Question 1 -->
-					<div class="myQ fade">
+					<div class="myQ">
 						<h1 style="width: 100%">Q1</h1>
 					  	<label><input type="radio" name="q1" value="c1">
 					  		A1
@@ -37,7 +37,7 @@
 					</div>
 
 					<!--Question 2 -->
-					<div class="myQ fade">
+					<div class="myQ">
 						<h1 style="width: 100%">Q2</h1>
 					 	<label><input type="radio" name="q2" value="c1">
 					  		A1
@@ -51,7 +51,7 @@
 					</div>
 
 					<!--Question 3 -->
-					<div class="myQ fade">
+					<div class="myQ">
 						<h1 style="width: 100%">Q3</h1>
 						<label><input type="radio" name="q3" value="c1">
 					  		A1
@@ -70,18 +70,20 @@
 
 	  		<!-- Modal Footer -->
 	  		<div class="modal-footer">
-		  		<!--Buttons -->
-		  		<input type="submit" id = "submit" name="submit" value="Results">
-			  	<button type="reset" id="reset" onclick="resetAnswer()">Start over</button>
-			  	<a href="https://www.americanexpress.com/uk/customer-service/?inav=gb_sitefooter_faqs">Need Help?</a>
-			  	<br>
 
-			  	<!-- The dots/circles -->
-				<div>
+	  			<!-- The dots/circles -->
+				<div class="dots"style="text-align: center;">
 				  <span class="dot" onclick="currentSlide(1)"></span>
 				  <span class="dot" onclick="currentSlide(2)"></span>
 				  <span class="dot" onclick="currentSlide(3)"></span>
 				</div>
+
+		  		<!--Buttons -->
+			  	<button type="reset" id="reset" onclick="resetAnswer()">Start over</button>
+			  	<input class="subbut" type="submit" id = "submit" name="submit" value="Submit">
+			  	<a class="botlink" href="https://www.americanexpress.com/uk/customer-service/?inav=gb_sitefooter_faqs">Need Help?</a>
+			  	
+
 			</div>
 
 	  	</form>
@@ -105,7 +107,7 @@
 	btn.onclick = function(){
 		modal.style.display= "block";
 		formq.style.display="block";
-		//reset all answers #################
+		//reset all answers
 		resetAnswer();
 	}
 

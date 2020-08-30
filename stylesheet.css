@@ -1,3 +1,27 @@
+* {
+	font-family: Helvetica, Verdana, Geneva;
+}
+
+body {
+	background-image: url("img/desktop_cards.jpg");
+	background-size: cover;
+}
+
+.stBtn {
+	position: relative;
+	left: 43%;
+	top: 360px;
+}
+
+button, .subbut {
+	background-color: #0A76D0;
+	color: white;
+	font-size: 16px;
+	padding: 10px 24px;
+	border-radius: 4px;
+	margin-bottom: 5px;
+}
+
 /* Wrapper Box*/
 .wrapper {
 	display: none;
@@ -21,7 +45,7 @@
 	padding: 0;
 	border: 1px solid black;
 	width: 60%;
-	height: 50%;
+	height: 55%;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 	-webkit-animation-name: animatetop;
   	-webkit-animation-duration: 0.4s;
@@ -40,10 +64,10 @@
 	to {top:0; opacity: 1}
 }
 
-/* Modal Header*/
+/* Modal Headerpadding: 2px 10px;*/
 .modal-header {
-	padding: 2px 16px;
 	background-color: #F7F8FA;
+	padding: 2px 10px;
 }
 
 /*Close Button*/
@@ -56,7 +80,7 @@
 
 .close:hover,
 .close:focus {
-	color: green;
+	color: grey;
 	text-decoration: none;
 	cursor: pointer;
 }
@@ -68,17 +92,66 @@
 
 /*Modal-Footer*/
 .modal-footer {
-	position: relative;
+	position: absolute;
 	bottom: 0;
 	padding: 2px 16px;
+	width: 96%;
 	background-color: #F7F8FA;
 }
 
+/*prev and next button*/
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 8px;
+	margin-top: -22px;
+	margin-right: 16px;
+	font-size: 18px;
+	font-weight: bold;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+
+/*Positioning next and prev*/
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+}
+
+/*Q&A Styling*/
+.myQ {
+	padding-left: 32px;
+	padding-right: 32px;
+}
+
+.subbut {
+	float: right;
+}
+
+.botlink {
+	float: right;
+	text-decoration: none;
+	padding: 10px 24px;
+}
+
 /* The dots/bullets/indicators */
+
+.dots {
+	margin-top: 5px;
+}
+
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 10px;
+  width: 10px;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
