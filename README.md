@@ -7,5 +7,5 @@ The code in this repository is to help American Express support their partnershi
 * A questionnaire to help small business owners find the correct American Express card for their business 
 * A *Jargon Buster* page to explain unfamiliar terms to the user 
 
-Our hope is that small business owners will be able to better assess which American Express card their business should use, and for the user to fully understand the financial benefits of such a card.  
+Our hope is that small business owners will be able to better assess which American Express card their company should use, and for the user to fully understand the financial benefits of such a card.  
 
