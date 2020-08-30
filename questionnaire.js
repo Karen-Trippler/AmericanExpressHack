@@ -1,5 +1,7 @@
 var slideIndex = 1;
-showSlides(slideIndex);
+var qform = document.getElementById("quiz");
+qform.style.display = "none";
+//showSlides(slideIndex);
 
 //right/left slide showing
 function plusSlides(n) {
@@ -98,4 +100,5 @@ function resetAnswer() {
   var answerbox = document.getElementById('answer');
   answerbox.style.display = "none";
   answerbox.innerHTML = "Your result will show up here!";
+  currentSlide(1);
 }

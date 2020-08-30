@@ -1,3 +1,79 @@
+/* Wrapper Box*/
+.wrapper {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+}
+
+/*Modal Box Content*/
+.modal-content {
+	position: relative;
+	background-color: #fefefe;
+	margin: auto;
+	padding: 0;
+	border: 1px solid black;
+	width: 60%;
+	height: 50%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	-webkit-animation-name: animatetop;
+  	-webkit-animation-duration: 0.4s;
+  	animation-name: animatetop;
+  	animation-duration: 0.4s;
+}
+
+/*Animation modal*/
+@-webkit-keyframes animatetop {
+	from {top:-300px; opacity: 0}
+	to {top:0; opacity: 1}
+}
+
+@keyframes animatetop {
+	from {top:-300px; opacity: 0}
+	to {top:0; opacity: 1}
+}
+
+/* Modal Header*/
+.modal-header {
+	padding: 2px 16px;
+	background-color: #F7F8FA;
+}
+
+/*Close Button*/
+.close {
+	color: black;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: green;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* Modal Body (Q&A)*/
+.slideshow-container {
+	padding: 2px 16px;
+}
+
+/*Modal-Footer*/
+.modal-footer {
+	position: relative;
+	bottom: 0;
+	padding: 2px 16px;
+	background-color: #F7F8FA;
+}
+
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
