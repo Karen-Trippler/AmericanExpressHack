@@ -3,10 +3,86 @@
   
 <head>
   <title>AMEX Jargon Buster</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
 </head>
   
 <body>
-  <p>We know that finding a new card for your business can be difficult.<br>There is nothing more important to American Express than our customers<br> finding the best card to suit their needs, so we have created our<br>'Jargon Buster' to help Cardmembers understand AMEX's financial terminology.</p> 
+  <h1>Jargon Buster</h1>
+  <p>We know that finding a new card for your business can be difficult.<br>There is nothing more important to American Express than our customers<br> finding the best card to suit their needs, so we have created our<br>'Jargon Buster' to help Cardmembers understand AMEX's financial terminology.</p>
+  
+<div>
+  
+  <!--TABLE-->
+<button type="button" class="collapsible">APR</button>
+<div class="content">
+  <p>INSERT TERM.</p>
+</div>
+<button type="button" class="collapsible">Interest Rate</button>
+<div class="content">
+  <p>INSERT TERM.</p>
+</div>
+<button type="button" class="collapsible">Charge Card</button>
+<div class="content">
+  <p>INSERT TERM.</p>
+</div>
+<button type="button" class="collapsible">Credit Card</button>
+<div class="content">
+  <p>INSERT TERM.</p>
+</div>  
+<button type="button" class="collapsible">Interest</button>
+<div class="content">
+  <p>INSERT TERM.</p>
+</div>  
+<button type="button" class="collapsible">Spending Limit</button>
+<div class="content">
+  <p>INSERT TERM.</p>
+</div>        
+<button type="button" class="collapsible">Purchase Rate</button>
+<div class="content">
+  <p>INSERT TERM.</p>
+</div>    
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+  
 </body>
   
 </html>
