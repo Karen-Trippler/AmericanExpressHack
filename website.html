@@ -8,7 +8,7 @@
 
 <body>
 <!--Button to start Questions -->
-<button class="stBtn" id="stBtn">Find the card for You!</button>
+<button class="stBtn" id="stBtn">Find the card for Me!</button>
 
 <!--Questionannaire Modal -->
 <div id="modalwrapper" class="wrapper">
@@ -17,36 +17,43 @@
 		<!-- Modal Header (Closing Button)-->
 		<div class="modal-header">
 			<span class="close" id="close1">&times;</span>
-			<h3>The perfect American Express Card for You!</h3>
+			<h2 style="padding-left: 16px;; letter-spacing: 3px;">Your Perfect AMEX Card</h2>
 		</div>
 		<!--Question Form -->
 		<form id="quiz" onsubmit="return tabulateAnswers()">
 			<div class="slideshow-container">			
 					<!--Question 1 -->
 					<div class="myQ">
-						<h1 style="width: 100%">Q1</h1>
-					  	<label><input type="radio" name="q1" value="c1">
-					  		A1
-					  	</label><br />
-					  	<label><input type="radio" name="q1" value="c2">
-					  		A2
-					  	</label><br />
-					  	<label><input type="radio" name="q1" value="c3">
-					  		A3
-					  	</label><br />
+						<h2 style="width: 100%">How many people currently work at your company?</h2>
+					  	<label class="ans"><input type="radio" name="q1" value="c1">
+					  		Just me!
+					  	</label>
+					  	<br/>
+					  	<label class="ans"><input type="radio" name="q1" value="c2">
+					  		2-10 people
+					  	</label><br/>
+					  	<label class="ans"><input type="radio" name="q1" value="c3">
+					  		10-50 people
+					  	</label><br/>
+					  	<label class="ans"><input type="radio" name="q1" value="c4">
+					  		50+ people
+					  	</label>
 					</div>
 
 					<!--Question 2 -->
 					<div class="myQ">
-						<h1 style="width: 100%">Q2</h1>
-					 	<label><input type="radio" name="q2" value="c1">
-					  		A1
+						<h2 style="width: 100%">Do you travel for/with your business?</h2>
+					 	<label class="ans"><input type="radio" name="q2" value="c1">
+					  		No, my business does not require travel.
 					  	</label><br />
-					  	<label><input type="radio" name="q2" value="c2">
-					  		A2
+					  	<label class="ans"><input type="radio" name="q2" value="c2">
+					  		Yes, I travel a few times annually for business.
 					  	</label><br />
-					  	<label><input type="radio" name="q2" value="c3">
-					  		A3
+					  	<label class="ans"><input type="radio" name="q2" value="c3">
+					  		Yes, I travel frequently with British Airways, Iberia, or American Airlines.
+					  	</label class="ans"><br />
+					  	<label class="ans"><input type="radio" name="q2" value="c4">
+					  		Yes, I travel frequently with an airline not listed above.
 					  	</label><br />
 					</div>
 
@@ -89,7 +96,21 @@
 
 		<!--Results Form -->
 		<div id="answer" class="ansbox" style="display: none">
-			<!--Cardimg and Text-->			
+			<!--Cardimg and Text-->	
+			<table class='cardinfo'>
+				<tr>
+					<!--Name of Card-->
+					<td></td>
+				</tr>
+				<tr>
+					<!--Card specific infor-->
+					<td></td>
+				</tr>
+				<tr>
+					<!--Link-->
+					<td></td>
+				</tr>
+			</table>		
 		</div>
 	</div>
 </div>

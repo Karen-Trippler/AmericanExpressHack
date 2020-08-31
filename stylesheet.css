@@ -1,5 +1,6 @@
 * {
-	font-family: Helvetica, Verdana, Geneva;
+	font-family: Guardian, Helvetica, Verdana, Geneva;
+	color: #606060;
 }
 
 body {
@@ -130,6 +131,13 @@ button, .subbut {
 .myQ {
 	padding-left: 32px;
 	padding-right: 32px;
+}
+
+/*Answer Text*/
+.ans { 
+	display: block;
+	font-size: 18px;
+	padding-left: 16px;
 }
 
 .subbut {

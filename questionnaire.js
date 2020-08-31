@@ -53,6 +53,12 @@ function tabulateAnswers() {
   var choices = document.getElementsByTagName('input');
   // loop through all the radio inputs
   for (i=0; i<choices.length; i++) {
+    //if the radio is not checked
+    if (choices[i].checked == false) {
+      alert('Some questions were not answered');
+      showSlides(1);
+      return false;
+    }
     // if the radio is checked..
     if (choices[i].checked) {
       // add 1 to that choice's score
