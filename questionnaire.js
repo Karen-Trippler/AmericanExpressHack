@@ -44,56 +44,113 @@ function showSlides(n) {
 
 // function to calculate the result of the survey
 function tabulateAnswers() {
-  // initialize variables for each choice's score
-  // If you add more choices and outcomes, you must add another variable here.
-  var c1score = 0;
-  var c2score = 0;
-  var c3score = 0;
+  //available card scores
+  var basicscore = 0;
+  var goldscore = 0;
+  var bascore = 0;
+  var platscore = 0;
   // get a list of the radio inputs on the page
   var choices = document.getElementsByTagName('input');
   // loop through all the radio inputs
   for (i=0; i<choices.length; i++) {
     //if the radio is not checked
     if (choices[i].checked == false) {
+      //alert the user
       alert('Some questions were not answered');
-      showSlides(1);
+      //return to current slide
+      showSlides(slideIndex);
+      //exit the function
       return false;
     }
-    // if the radio is checked..
-    if (choices[i].checked) {
-      // add 1 to that choice's score
-      if (choices[i].value == 'c1') {
-        c1score = c1score + 1;
-      }
-      if (choices[i].value == 'c2') {
-        c2score = c2score + 1;
-      }
-      if (choices[i].value == 'c3') {
-        c3score = c3score + 1;
-      }
-      // If you add more choices and outcomes, you must add another if statement below.
-    }
+
+  }
+
+  //get the radio choices
+  var q1val = choices[0].value;
+  var q2val = choices[1].value;
+  var q3val = choices[2].value;
+  var q4val = choices[3].value;
+
+
+  //Q1
+  if (q1val == 'c1') {
+    basicscore = basicscore + 1;
+  }
+  if (q1val == 'c2') {
+    goldscore = goldscore + 1;
+    bascore = bascore +1;
+  }
+  if (q1val == 'c3') {
+    platscore = platscore + 1;
+  }
+
+  //Q2
+  if (q2val == 'c1') {
+    basicscore = basicscore + 1;
+  }
+  if (q2val == 'c2') {
+    goldscore = goldscore + 1;
+  }
+  if (q2val == 'c3') {
+    bascore = bascore +1;
+  }
+  if (q2val == 'c4') {
+    platscore = platscore + 1;
+  }
+
+  //Q3
+  if (q3val == 'c1') {
+    basicscore = basicscore + 1;
+  }
+  if (q3val == 'c2') {
+    goldscore = goldscore + 1;
+  }
+  if (q3val == 'c3') {
+    bascore = bascore +1;
+  }
+  if (q3val == 'c4') {
+    platscore = platscore + 1;
+  }
+
+  //Q4
+  if (q4val == 'c1') {
+    basicscore = basicscore + 1;
+  }
+  if (q4val == 'c2') {
+    goldscore = goldscore + 1;
+    bascore = bascore + 1;
+  }
+  if (q4val == 'c3') {
+    platscore = platscore + 1;
   }
 
   // Find out which choice got the highest score.
-  var maxscore = Math.max(c1score,c2score,c3score);
+  var maxscore = Math.max(bascore,basicscore,goldscore,platscore);
   // Display answer corresponding to that choice
   var answerbox = document.getElementById('answer');
   answerbox.style.display = "block";
   var anstext = document.getElementById('anstext');
 
-  if (c1score == maxscore) { // If user chooses the first choice the most, this outcome will be displayed.
-      answerbox.innerHTML = "Option 1 was chosen";
-  }
-  if (c2score == maxscore) { // If user chooses the second choice the most, this outcome will be displayed.
-      answerbox.innerHTML = "Option 2 was chosen";
-  }
-  if (c3score == maxscore) { // If user chooses the third choice the most, this outcome will be displayed.
-      answerbox.innerHTML = "Option 3 was chosen";
+  //basic card
+  if (basicscore == maxscore) { // If user chooses the first choice the most, this outcome will be displayed.
+      //answerbox.innerHTML = "Option 1 was chosen";
       var cardimg = "img/basic_card.jpg";
+  }
+  //Gold card
+  if (goldscore == maxscore) { // If user chooses the second choice the most, this outcome will be displayed.
+      //answerbox.innerHTML = "Option 2 was chosen";
+      var cardimg = "img/gold_card.jpg";
+  }
+  // BA card
+  if (bascore == maxscore) { // If user chooses the third choice the most, this outcome will be displayed.
+      var cardimg = "img/airways_card.jpg";
       var cardtext = "...";
       var cardlink = "https://www.americanexpress.com/uk/customer-service/?inav=gb_sitefooter_faqs";
       //answerbox.innerHTML = "<img src='"+cardimg+"'>"
+  }  
+  //Platinum card
+  if (platscore == maxscore) { // If user chooses the second choice the most, this outcome will be displayed.
+      var cardimg = "img/platinum_card.jpg";
   }   
   // If you add more choices, you must add another response below.
 
@@ -124,3 +181,4 @@ function resetAnswer() {
   answerbox.innerHTML = "Your result will show up here!";
   currentSlide(1);
 }
+
