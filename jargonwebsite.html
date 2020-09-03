@@ -6,66 +6,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
 <style>
+ 
+body {
+  background-color: #F7F8FA;
+  font-family: Guardian, Helvetica, Verdana, Geneva;
+    }
+  
 .collapsible {
-  background-color: #777;
-  color: white;
+  background-color: #FFFFFF;
+  color: #1d8ece;
   cursor: pointer;
   padding: 18px;
   width: 100%;
-  border: none;
+  border: 1px #F2F2F2;;
   text-align: left;
   outline: none;
   font-size: 15px;
+  font-family: Guardian, Helvetica, Verdana, Geneva;
+  border-radius: 3px;
 }
 
 .active, .collapsible:hover {
-  background-color: #555;
+  background-color: #cccccc;
 }
 
 .content {
   padding: 0 18px;
   display: none;
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  border-style: groove;
+  border: 1px #F2F2F2;
+  font-family: Guardian, Helvetica, Verdana, Geneva;
 }
+   
+  {
+    box-sizing: border-box;
+  }
+ 
+  
 </style>
 </head>
   
 <body>
+
+  
+  <img scr="img/amex_border.jpg" alt="Amex Header" width="500" height="200">
+  
+  
+  
   <h1>Jargon Buster</h1>
-  <p>We know that finding a new card for your business can be difficult.<br>There is nothing more important to American Express than our customers<br> finding the best card to suit their needs, so we have created our<br>'Jargon Buster' to help Cardmembers understand AMEX's financial terminology.</p>
+  <p>We know that finding a new card for your business can be difficult.There is nothing more important to American Express than our customers finding the best card to suit their needs, so we have created our 'Jargon Buster' to help Cardmembers understand AMEX's financial terminology.</p>
   
 <div>
   
   <!--TABLE-->
 <button type="button" class="collapsible">APR</button>
 <div class="content">
-  <p>Annual Percentage Rate - a percentage which shows the yearly cost<br>to borrow money. This percentage includes the interest expense, and<br>all other fees associated with obtaining the loan.</p>
+  <p>Annual Percentage Rate - a percentage which shows the yearly cost to borrow money. This percentage includes the interest expense, and all other fees associated with obtaining the loan.</p>
 </div>
+  <br>
+  <br>
 <button type="button" class="collapsible">Interest Rate</button>
 <div class="content">
-  <p>Represeted as a percentage, the interest rate is the amount charged<br>to the borrower for taking out a loan.</p>
+  <p>Represeted as a percentage, the interest rate is the amount charged to the borrower for taking out a loan.</p>
 </div>
+   <br>
+   <br>
 <button type="button" class="collapsible">Charge Card</button>
 <div class="content">
-  <p>A type of credit card, whereby the user must pay the balance in full<br>every month.</p>
+  <p>A type of credit card, whereby the user must pay the balance in full every month.</p>
 </div>
+   <br>
+   <br>
 <button type="button" class="collapsible">Credit Card</button>
 <div class="content">
-  <p>A card that allows the user to purchase services and goods on credit.<br>Unlike a charge card, the user can pay off their purchases over time,<br>however interest will be charged.</p>
-</div>  
+  <p>A card that allows the user to purchase services and goods on credit. Unlike a charge card, the user can pay off their purchases over time, however interest will be charged.</p>
+</div> 
+   <br>
+   <br>
 <button type="button" class="collapsible">Interest</button>
 <div class="content">
-  <p>Displayed as an interest rate, interest is what the lender charges the<br> the borrower for borrowing money, or interest is charged if repayment is<br> delayed.</p>
+  <p>Displayed as an interest rate, interest is what the lender charges the borrower for borrowing money, or interest is charged if repayment is delayed.</p>
 </div>  
+   <br>
+   <br>
 <button type="button" class="collapsible">Spending Limit</button>
 <div class="content">
-  <p>The maximum amount of money that the user can spend in a specified<br> time frame. If the user reaches their spending limit, the card will<br>decline regardless if there are enough funds in the user's account.<br>Such spending limits differ, and are set by the institution which the<br>card is associated with.</p>
-</div>        
-<button type="button" class="collapsible">Purchase Rate</button>
-<div class="content">
-  <p>INSERT TERM.</p>
-</div>    
+  <p>The maximum amount of money that the user can spend in a specified time frame. If the user reaches their spending limit, the card will decline regardless if there are enough funds in the user's account. Such spending limits differ, and are set by the institution which the card is associated with.</p>
+</div>     
 
 <script>
 var coll = document.getElementsByClassName("collapsible");
