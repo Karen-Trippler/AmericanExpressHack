@@ -10,3 +10,8 @@ The code in this repository is to help American Express support small business. 
 Our hope is that small business owners will be able to better assess which American Express card their company should use, and for the user to fully understand the financial benefits of such a card.  
 
 This project has been created by Julia Enright, Karen Trippler, and Iona Carslaw. 
+
+## Set-up Instructions
+
+Simply pull or manually download the repository. 
+Then open `website.html` with your preferred browser (Firefox and Chrome have been tested so please be aware that issues might arise with other browsers)
