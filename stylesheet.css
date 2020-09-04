@@ -46,7 +46,7 @@ button, .subbut {
 	padding: 0;
 	border: 1px solid black;
 	width: 60%;
-	height: 55%;
+	height: 60%;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 	-webkit-animation-name: animatetop;
   	-webkit-animation-duration: 0.4s;
@@ -175,14 +175,37 @@ button, .subbut {
 .cardimg {
 	float: left;
 	padding: 16px;
+	padding-top: 30px;
+	margin-right: 16px;
+	margin-bottom: 80px;
+	margin-top: 20px;
 }
 
 .anstext {
-	float: right;
 	padding: 16px;
 }
 
 .cardlink {
 	text-decoration: none;
 	padding: 10px 24px;
+}
+
+p {
+	font-size: 16px;
+	padding-left: 16px;
+}
+
+/*.alist {
+	font-size: 16px;
+}*/
+
+ul.a {
+	font-size: 16px;
+	padding-left: 30px;
+	list-style-type: circle;
+	list-style-position: inside;
+}
+
+li {
+	margin-left: 50px;
 }
