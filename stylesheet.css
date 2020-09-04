@@ -3,11 +3,6 @@
 	color: #606060;
 }
 
-body {
-	background-image: url("img/desktop_cards.jpg");
-	background-size: cover;
-}
-
 .stBtn {
 	position: relative;
 	left: 43%;
@@ -94,7 +89,7 @@ button, .subbut {
 }
 
 div#modalwrapper div#infoQ div.infoqbut {
-	margin-left: 40px !important;
+	margin-left: 40px;
 }
 
 /* Modal Body (Q&A)*/
