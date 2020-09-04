@@ -19,6 +19,14 @@
 			<span class="close" id="close1">&times;</span>
 			<h2 style="padding-left: 16px;; letter-spacing: 3px;">Your Perfect AMEX Card</h2>
 		</div>
+		<div id="info_check" class="infoQ">
+			<h2>Are you interested in an American Express card for your business?</h2>
+			<div class="infoqbut">
+				<br><br>
+				<button id="startBut" style="margin-left: 35%">Yes, let's find the right one!</button></br></br><br>
+				<button id="changeBut" style="margin-left: 21%">No, I'm looking for other information with American Express</button>
+			</div>
+		</div>
 		<!--Question Form -->
 		<form id="quiz" onsubmit="return tabulateAnswers()">
 			<div class="slideshow-container">			
@@ -67,7 +75,7 @@
 
 				<!--Question 4 -->
 				<div class="myQ">
-					<h2 style="width: 100%">What do you typically spend on your business monthly (whether it is on another business card or not)?</h1>
+					<h2 style="width: 100%">What do you typically spend on your business monthly (whether it is on another business card or not)?</h2>
 					<label class="ans"><input type="radio" name="q4" value="c1">
 				  		Less than 3000 pounds
 				  	</label><br />
@@ -87,7 +95,7 @@
 	  		<div class="modal-footer">
 
 	  			<!-- The dots/circles -->
-				<div class="dots"style="text-align: center;">
+				<div class="dots" style="text-align: center;">
 				  <span class="dot" onclick="currentSlide(1)"></span>
 				  <span class="dot" onclick="currentSlide(2)"></span>
 				  <span class="dot" onclick="currentSlide(3)"></span>
@@ -129,6 +137,7 @@
 	//get the modal
 	var modal = document.getElementById("modalwrapper");
 	var formq = document.getElementById("quiz");
+	var infq = document.getElementById("info_check");
 	//Start Button
 	var btn = document.getElementById("stBtn");
 	//closing element
@@ -137,7 +146,8 @@
 	//starting the questionannaire
 	btn.onclick = function(){
 		modal.style.display= "block";
-		formq.style.display="block";
+		//formq.style.display="block";
+		infq.style.display = "block";
 		//reset all answers
 		resetAnswer();
 	}
@@ -146,6 +156,18 @@
 	closespan.onclick = function(){
 		modal.style.display = "none";
 		formq.style.display = "none";
+	}
+
+	startBut.onclick = function() {
+		//hide div
+		infq.style.display = "none";
+		//initiate questionnaire
+		formq.style.display = "block";
+
+	}
+
+	changeBut.onclick = function() {
+		window.open("https://www.americanexpress.com");
 	}
 
 </script>
