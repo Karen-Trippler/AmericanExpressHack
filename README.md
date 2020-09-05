@@ -14,4 +14,4 @@ This project has been created by Julia Enright, Karen Trippler, and Iona Carslaw
 ## Set-up Instructions
 
 Simply pull or manually download the repository. 
-Then open `website.html` with your preferred browser (Firefox and Chrome have been tested so please be aware that issues might arise with other browsers)
+Then open `website.html` (Questionnaire) and `jargonwebsite.htmml`(Jargon Buster) with your preferred browser (Firefox and Chrome have been tested so please be aware that issues may arise with other browsers). The websites were developed using HTML, CSS and JavaScript.
